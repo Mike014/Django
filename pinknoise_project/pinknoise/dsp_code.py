@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import welch
 from scipy.fftpack import fft, ifft
+import ctcsound
 
 class PinkNoise:
     def __init__(self, N=44100, amp=1.0, beta=1.0):
@@ -65,3 +66,31 @@ class PinkNoise:
         plt.legend()
         plt.grid(True, which="both", ls="--")
         plt.show()
+
+        # Csound code integration
+        csd = """
+        <CsoundSynthesizer>
+        <CsOptions>
+        -odac
+        </CsOptions>
+        <CsInstruments>
+        instr 1
+            aout pinkish 0.5
+            out aout
+        endin
+        </CsInstruments>
+        <CsScore>
+        i 1 0 25
+        </CsScore>
+        </CsoundSynthesizer>
+        """
+
+        cs = ctcsound.Csound()
+        cs.compileCsdText(csd)
+        cs.start()
+        cs.perform()
+        cs.stop()
+        cs.cleanup()
+
+
+ 
