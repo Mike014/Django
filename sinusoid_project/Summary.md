@@ -39,7 +39,7 @@ python manage.py runserver
 - Access the application: Open your web browser and navigate to http://127.0.0.1:8000/sinusoid/plot/.
 
 # Example Usage
-- The application will generate and display a plot of a sinusoidal wave with a frequency of 440 Hz and amplitude of 1.0.
+- The application will generate and display a plot of a sinusoidal wave with a frequency of 100 Hz and amplitude of 1.0.
 
 
 
