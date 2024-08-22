@@ -23,7 +23,7 @@ class Sinusoid:
         return ts, ys
 
 def plot_sinusoid(request):
-    sinusoid = Sinusoid(freq=440, amp=1.0, offset=0, func=np.sin)
+    sinusoid = Sinusoid(freq=100, amp=1.0, offset=0, func=np.sin)
     ts, ys = sinusoid.make_wave(duration=1.0, start=0, framerate=44100)
 
     fig, ax = plt.subplots()

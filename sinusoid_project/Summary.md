@@ -4,7 +4,7 @@
 The Sinusoid Project is a Django application designed to generate and visualize sinusoidal waves. This project demonstrates the integration of Django with Matplotlib to create dynamic plots that can be rendered in a web application.
 
 ## Features
-- Sinusoidal Wave Generation: Generates a sinusoidal wave with a fixed frequency of 440 Hz, amplitude of 1.0, and no phase offset.
+- Sinusoidal Wave Generation: Generates a sinusoidal wave with a fixed frequency of 100 Hz, amplitude of 1.0, and no phase offset.
 - Dynamic Plotting: Uses Matplotlib to create and display the sinusoidal wave plot within the web application.
 
 ## Key Files and Their Roles
