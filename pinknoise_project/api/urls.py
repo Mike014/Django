@@ -1,10 +1,12 @@
-# pinknoise_project/urls.py
-from django.contrib import admin
+# api/urls.py
 from django.urls import path, include
-from api.views import dsp_view
+from rest_framework.routers import DefaultRouter
+from .views import PinkNoiseViewSet
+
+router = DefaultRouter()
+router.register(r'pinknoise', PinkNoiseViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
-    path('', dsp_view, name='dsp_view'),
+    path('', include(router.urls)),
 ]
+
