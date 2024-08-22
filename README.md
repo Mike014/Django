@@ -7,4 +7,5 @@ This repository contains a collection of projects developed using the Django fra
 - Code Examples: Example code to illustrate the main features of Django, such as URL management, views, models, and templates.
   
 Included Projects
-1.	Sinusoid Project: A Django application that generates and visualizes a sinusoidal wave using Matplotlib.
+1.	sinusoid Project: A Django application that generates and visualizes a sinusoidal wave using Matplotlib.
+2.      pinknoise_project: A Django application that generates and visualizes a pink noise using Matplotlib, Scipy (fft, ifft).
