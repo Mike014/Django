@@ -5,7 +5,7 @@ This Django application allows you to generate and download an audio file using 
 ## Features
 
 1. **Welcome Page**:
-   - The main endpoint (`/polls/`) displays a welcome page with a link to generate a sound.
+   - The main endpoint (`/app/`) displays a welcome page with a link to generate a sound.
 
 2. **Sound Generation**:
    - The endpoint `/polls/generate_sound/` generates a 440 Hz sine wave (A note) with a duration of 2 seconds.
@@ -31,7 +31,7 @@ This Django application allows you to generate and download an audio file using 
    - Run the command `python manage.py runserver` to start the server.
 
 2. **Access the Welcome Page**:
-   - Visit `http://127.0.0.1:8000/polls/` in your browser to see the welcome page.
+   - Visit `http://127.0.0.1:8000/app/` in your browser to see the welcome page.
 
 3. **Generate and Download the Sound**:
    - Click on the "Click here to generate a sound" link to generate the sound.
