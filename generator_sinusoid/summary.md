@@ -26,13 +26,13 @@ To run the Sinusoid Project locally, follow these steps:
 
 - Clone the repository:
 
-git clone https://github.com/MikyMikeMusic/Django.git 
-cd your-repository
+**git clone https://github.com/MikyMikeMusic/Django.git**
+**cd your-repository**
 
 
 - Run the migrations:
 
-python manage.py migrate
+**python manage.py migrate**
 
 - Start the development server:
 
