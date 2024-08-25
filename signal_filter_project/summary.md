@@ -6,21 +6,26 @@ This web application allows users to apply a low-pass filter to a synthetically 
 
 ## Application Functionality
 
-1. **User Interface**:
-   - Users can adjust the signal and filter parameters using sliders in the form.
-   - The parameters include the signal frequency, the filter cutoff frequency, and the resonance.
+### User Interface:
 
-2. **Signal Visualization**:
-   - After setting the parameters, users can view the graphs of the original and filtered signals.
-   - The graphs are generated using Plotly and show the signal's behavior over time.
+- Users can adjust the signal and filter parameters using sliders in the form.
+- The parameters include the signal frequency, the filter cutoff frequency, and the resonance.
 
-3. **Signal Playback**:
-   - Users can play the filtered signal by clicking a button.
-   - Playback is handled using the Web Audio API.
+### Signal Visualization:
+
+- After setting the parameters, users can view the graphs of the original and filtered signals.
+- The graphs are generated using Plotly and show the signal's behavior over time.
+
+### Signal Playback:
+
+- Users can play the filtered signal by clicking a button.
+- Playback is handled using the Web Audio API.
 
 ## Conclusion
 
 This application demonstrates how to use Django to create an interactive web interface that allows users to apply a low-pass filter to an audio signal. It uses Plotly to visualize the signals and the Web Audio API to play the filtered signal.
 
-![Alt text](C:\Users\PC\Downloads\ScreenShot)
+![Alt text](C:\Users\PC\Downloads\ScreenShot.png)
+
+
 
