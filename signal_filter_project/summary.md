@@ -25,7 +25,10 @@ This web application allows users to apply a low-pass filter to a synthetically 
 
 This application demonstrates how to use Django to create an interactive web interface that allows users to apply a low-pass filter to an audio signal. It uses Plotly to visualize the signals and the Web Audio API to play the filtered signal.
 
-![Alt text](C:\Users\PC\Downloads\ScreenShot.png)
+![Alt text](images/ScreenShot.png)
+
+
+
 
 
 
