@@ -12,7 +12,7 @@ The "Sfx Management with Django" project is a management system for handling sou
 - **Template File:** [home.html](#home.html-context)
 - **Description:** The home page of the project. From here, users can navigate to other pages such as uploading sound effects and listing files. The page includes a title and a navigation menu.
 - **Screenshot:**
-  ![Home Page](https://github.com/MikyMikeMusic/Django/blob/main/sfx_management/images/1%20Sfx%20management.PNG)
+  ![Home Page](images/1%20Sfx%20management.PNG)
 
 ## Upload Page
 
@@ -20,7 +20,7 @@ The "Sfx Management with Django" project is a management system for handling sou
 - **Template File:** [upload.html](#upload.html-context)
 - **Description:** This page allows users to upload new sound effects. It includes a form for file upload and a submit button. The page uses a background image and custom styles.
 - **Screenshot:**
-  ![Upload Page](https://github.com/MikyMikeMusic/Django/blob/main/sfx_management/images/2%20Sfx%20management.PNG)
+  ![Upload Page](/images/2%20Sfx%20management.PNG)
 
 ## Success Page
 
@@ -28,7 +28,7 @@ The "Sfx Management with Django" project is a management system for handling sou
 - **Template File:** [success.html](#success.html-context)
 - **Description:** This page confirms that the sound effect has been successfully uploaded. It includes a link to upload another sound effect and an audio player to listen to the newly uploaded file.
 - **Screenshot:**
-  ![Success Page](https://github.com/MikyMikeMusic/Django/blob/main/sfx_management/images/3%20Sfx%20management.PNG)
+  ![Success Page](images/3%20Sfx%20management.PNG)
 
 ## File List Page
 
@@ -36,7 +36,7 @@ The "Sfx Management with Django" project is a management system for handling sou
 - **Template File:** [list_files.html](#list_files.html-context)
 - **Description:** This page shows a list of all files in the `sfx_files` directory. Each file is linked so it can be downloaded or listened to directly from the browser. The page uses a background image and custom styles.
 - **Screenshot:**
-  ![File List Page](https://github.com/MikyMikeMusic/Django/blob/main/sfx_management/images/3%20Sfx%20management.PNG)
+  ![File List Page](images/3%20Sfx%20management.PNG)
 
 ## Notes
 
