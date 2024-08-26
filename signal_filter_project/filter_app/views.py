@@ -5,6 +5,9 @@ from django.views import generic
 import numpy as np
 from scipy.signal import butter, lfilter
 import json
+import tempfile
+import soundfile as sf
+import os
 
 def butter_lowpass(cutoff, fs, order=5):
     nyq = 0.5 * fs
@@ -16,6 +19,12 @@ def butter_lowpass_filter(data, cutoff, fs, order=5):
     b, a = butter_lowpass(cutoff, fs, order=order)
     y = lfilter(b, a, data)
     return y
+
+def save_temp_audio_file(data, fs):
+    temp_file = tempfile.NamedTemporaryFile(delete=False, suffix='.wav')
+    sf.write(temp_file.name, data, fs)
+    print(f"Audio file saved at: {temp_file.name}")
+    return temp_file.name
 
 class IndexView(generic.TemplateView):
     template_name = 'filter_app/index.html'
@@ -40,6 +49,9 @@ class IndexView(generic.TemplateView):
         if max_val > 0:
             filtered_signal = [x / max_val for x in filtered_signal]
 
+        audio_file_path = save_temp_audio_file(filtered_signal, fs)
+        print(f"Audio file path in context: {audio_file_path}")
+
         context.update({
             'cutoff': cutoff,
             'resonance': resonance,
@@ -47,7 +59,18 @@ class IndexView(generic.TemplateView):
             'signal': json.dumps(signal.tolist()),
             'filtered_signal': json.dumps(filtered_signal),
             't': json.dumps(t.tolist()),
+            'audio_file_path': audio_file_path,
         })
         return context
+
+
+
+
+
+
+
+
+
+
 
 

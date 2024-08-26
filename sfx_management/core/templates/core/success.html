@@ -1,0 +1,58 @@
+<!-- core/templates/core/success.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon-64.ico' %}">
+    <style>
+        body {
+            background-image: url("{% static 'images/Nuovo Logo.jpg' %}");
+            background-size: cover;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        a {
+            color: #00ff00;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sound Effect Uploaded Successfully!</h1>
+    <a href="{% url 'upload_sound_effect' %}">Upload Another Sound Effect</a>
+    <audio controls>
+        <source src="{{ MEDIA_URL }}{{ sound_effect.file }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

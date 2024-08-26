@@ -1,0 +1,48 @@
+<!-- core/templates/core/list_files.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File List</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon-64.ico' %}">
+    <style>
+        body {
+            background-image: url("{% static 'images/Nuovo Logo.jpg' %}");
+            background-size: cover;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        a {
+            color: #00ff00;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>List of Files in the sfx_files Directory</h1>
+    <ul>
+        {% for file in files %}
+        <li><a href="{{ MEDIA_URL }}sfx_files/{{ file }}">{{ file }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Low-Pass Filter</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js" async defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Low-Pass Filter</h1>
@@ -22,45 +25,45 @@
         <button type="submit">Apply</button>
     </form>
 
-    <button onclick="playSound()">Play</button>
-
-    <div id="originalSignal" style="width:800px;height:400px;"></div>
-    <div id="filteredSignal" style="width:800px;height:400px;"></div>
-
+    <div id="originalSignal" class="plot-container"></div>
+    <div id="filteredSignal" class="plot-container"></div>
+    <audio id="audioPlayer" src="{{ audio_file_path }}" type="audio/wav" controls autoplay></audio>
     <script>
-        const t = JSON.parse('{{ t|escapejs }}');
-        const signal = JSON.parse('{{ signal|escapejs }}');
-        const filteredSignal = JSON.parse('{{ filtered_signal|escapejs }}');
+        function initializePlots() {
+            const t = JSON.parse('{{ t|escapejs }}');
+            const signal = JSON.parse('{{ signal|escapejs }}');
+            const filteredSignal = JSON.parse('{{ filtered_signal|escapejs }}');
 
-        console.log("Time Array:", t);
-        console.log("Original Signal:", signal);
-        console.log("Filtered Signal:", filteredSignal);
+            console.log("Time Array:", t);
+            console.log("Original Signal:", signal);
+            console.log("Filtered Signal:", filteredSignal);
 
-        Plotly.newPlot('originalSignal', [{
-            x: t,
-            y: signal,
-            type: 'scatter',
-            mode: 'lines',
-            name: 'Original Signal',
-            line: { color: 'blue' }
-        }], {
-            title: 'Original Signal',
-            xaxis: { title: 'Time [s]' },
-            yaxis: { title: 'Amplitude' }
-        });
+            Plotly.newPlot('originalSignal', [{
+                x: t,
+                y: signal,
+                type: 'scatter',
+                mode: 'lines',
+                name: 'Original Signal',
+                line: { color: 'blue' }
+            }], {
+                title: 'Original Signal',
+                xaxis: { title: 'Time [s]' },
+                yaxis: { title: 'Amplitude' }
+            });
 
-        Plotly.newPlot('filteredSignal', [{
-            x: t,
-            y: filteredSignal,
-            type: 'scatter',
-            mode: 'lines',
-            name: 'Filtered Signal',
-            line: { color: 'red' }
-        }], {
-            title: 'Filtered Signal',
-            xaxis: { title: 'Time [s]' },
-            yaxis: { title: 'Amplitude' }
-        });
+            Plotly.newPlot('filteredSignal', [{
+                x: t,
+                y: filteredSignal,
+                type: 'scatter',
+                mode: 'lines',
+                name: 'Filtered Signal',
+                line: { color: 'red' }
+            }], {
+                title: 'Filtered Signal',
+                xaxis: { title: 'Time [s]' },
+                yaxis: { title: 'Amplitude' }
+            });
+        }
 
         function updateFrequency(value) {
             document.getElementById('frequencyValue').innerText = value;
@@ -74,23 +77,39 @@
             document.getElementById('resonanceValue').innerText = value;
         }
 
-        function playSound() {
-            console.log("Playing sound...");
-            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            const buffer = audioContext.createBuffer(1, filteredSignal.length, 44100);
-            const data = buffer.getChannelData(0);
-            for (let i = 0; i < filteredSignal.length; i++) {
-                data[i] = filteredSignal[i];
+        document.addEventListener('DOMContentLoaded', (event) => {
+            if (typeof Plotly !== 'undefined') {
+                initializePlots();
+            } else {
+                console.error("Plotly is not loaded.");
             }
-
-            const source = audioContext.createBufferSource();
-            source.buffer = buffer;
-            source.connect(audioContext.destination);
-            source.start();
-        }
+        });
     </script>
 </body>
 </html>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

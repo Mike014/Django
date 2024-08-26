@@ -1,0 +1,42 @@
+<!-- core/templates/core/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon-64.ico' %}">
+    <style>
+        body {
+            background-image: url("{% static 'images/Nuovo Logo.jpg' %}");
+            background-size: cover;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        a {
+            color: #00ff00;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sfx Management with Django from M1k3_S0und</h1>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'upload_sound_effect' %}">Upload sfx</a></li>
+        <li><a href="{% url 'list_files' %}">List files</a></li>
+    </ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

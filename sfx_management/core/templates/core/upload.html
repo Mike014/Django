@@ -1,0 +1,38 @@
+<!-- core/templates/core/upload.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Sound Effect</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon-64.ico' %}">
+    <style>
+        body {
+            background-image: url("{% static 'images/Nuovo Logo.jpg' %}");
+            background-size: cover;
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        a {
+            color: #00ff00;
+            text-shadow: 2px 2px 4px #000000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Sound Effect</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
