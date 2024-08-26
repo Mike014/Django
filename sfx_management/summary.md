@@ -46,7 +46,3 @@ The "Sfx Management with Django" project is a management system for handling sou
 If you need further information or assistance, feel free to ask!
 
 
-- Navigation links are present on the home page to facilitate access to other pages of the site.
-
-If you need further information or assistance, feel free to ask!
-
