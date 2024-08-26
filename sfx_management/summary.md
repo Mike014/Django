@@ -12,7 +12,7 @@ The "Sfx Management with Django" project is a management system for handling sou
 - **Template File:** [home.html](#home.html-context)
 - **Description:** The home page of the project. From here, users can navigate to other pages such as uploading sound effects and listing files. The page includes a title and a navigation menu.
 - **Screenshot:**
-  ![Home Page](images/1.PNG | width=300)
+  <img src="images/1.PNG" alt="Home Page" width="300"/>
 
 ## Upload Page
 
@@ -20,7 +20,7 @@ The "Sfx Management with Django" project is a management system for handling sou
 - **Template File:** [upload.html](#upload.html-context)
 - **Description:** This page allows users to upload new sound effects. It includes a form for file upload and a submit button. The page uses a background image and custom styles.
 - **Screenshot:**
-  ![Upload Page](images/2.PNG | width=300)
+  <img src="images/2.PNG" alt="Upload Page" width="300"/>
 
 ## Success Page
 
@@ -28,7 +28,7 @@ The "Sfx Management with Django" project is a management system for handling sou
 - **Template File:** [success.html](#success.html-context)
 - **Description:** This page confirms that the sound effect has been successfully uploaded. It includes a link to upload another sound effect and an audio player to listen to the newly uploaded file.
 - **Screenshot:**
-  ![Success Page](images/3.PNG | width=300)
+  <img src="images/3.PNG" alt="Success Page" width="300"/>
 
 ## File List Page
 
@@ -36,7 +36,7 @@ The "Sfx Management with Django" project is a management system for handling sou
 - **Template File:** [list_files.html](#list_files.html-context)
 - **Description:** This page shows a list of all files in the `sfx_files` directory. Each file is linked so it can be downloaded or listened to directly from the browser. The page uses a background image and custom styles.
 - **Screenshot:**
-  ![File List Page](images/3.PNG | width=300)
+  <img src="images/3.PNG" alt="File List Page" width="300"/>
 
 ## Notes
 
@@ -44,6 +44,3 @@ The "Sfx Management with Django" project is a management system for handling sou
 - Navigation links are present on the home page to facilitate access to other pages of the site.
 
 If you need further information or assistance, feel free to ask!
-
-
-
