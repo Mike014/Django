@@ -39,6 +39,12 @@ def analyze_text(request):
     except Exception as e:
         return render(request, 'nlp_app/analyze.html', {'error': str(e)})
 
+  
+  
+     
+  
+
+
 
 
 

@@ -1,0 +1,29 @@
+<!-- translator/templates/translator/translate.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traduttore</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'translator/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Traduttore</h1>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <textarea name="text" rows="10" cols="30"></textarea>
+            <button type="submit">Traduci</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
