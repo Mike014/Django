@@ -27,23 +27,21 @@ To run the Sinusoid Project locally, follow these steps:
 
 - Clone the repository:
 
-**git clone https://github.com/MikyMikeMusic/Django.git**
+**git clone https://github.com/Mike014/Generator-Sinusoid-Binaural.git**
 **cd your-repository**
 
 
 - Run the migrations:
 
-```python manage.py migrate```
+**python manage.py migrate**
 
 - Start the development server:
   
-```ython manage.py runserver```
+**python manage.py runserver**
 
 - Access the application: Open your web browser and navigate to `http://127.0.0.1:8000/sinusoid/`.
 
 ## Example Usage
 
 - The application allows the user to input a frequency and optionally select a binaural option. It will generate and display a plot of the sine wave with the specified frequency. Additionally, the user will be able to listen to the generated sine wave audio
-  
-
   

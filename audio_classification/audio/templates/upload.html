@@ -1,0 +1,57 @@
+<!-- templates/upload.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Audio</title>
+    <style>
+        .custom-file-input {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 2.5em;
+            margin-bottom: 1em;
+            cursor: pointer;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 0.5em;
+            text-align: center;
+            font-size: 14px;
+        }
+
+            .custom-file-input::before {
+                content: 'No file chosen';
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 1.5em;
+                color: #999;
+            }
+
+            .custom-file-input input[type="file"] {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <h1>Upload Audio</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="custom-file-input">
+            <input type="file" name="file" onchange="this.parentNode.querySelector('::before').textContent = this.files[0].name">
+        </div>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
+
+
+
+
